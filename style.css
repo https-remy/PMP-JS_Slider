@@ -1,0 +1,112 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+	min-height: 100vh;
+	background: linear-gradient(to right, #11998e, #38ef7d);
+	padding: clamp(20px, 12vw, 120px) 10px 10px;
+}
+
+.slider-container {
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	background: #111;
+	display: grid;
+}
+
+.direction-btn {
+	position: absolute;
+	z-index: 100;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid #fff;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.direction-btn:hover {
+	background: #181818;
+}
+
+.direction-btn img {
+	pointer-events: none;
+	width: 50%;
+}
+
+.direction-btn.right {
+	right: 10%;
+}
+
+.direction-btn.left {
+	left: 10%;
+}
+
+.slide {
+	grid-area: 1 / 1 / 2 / 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 0;
+	display: none;
+}
+
+.slide.active {
+	display: flex;
+}
+
+.content {
+	margin-bottom: 50px;
+	color: #dfdfdf;
+	text-align: center;
+}
+
+.content img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px solid #fff;
+}
+
+.content h2 {
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+.content p {
+	margin-top: 10px;
+	font-size: 20px;
+	color: grey
+}
+
+.content button {
+	font-size: 20px;
+	padding: 10px;
+	margin-top: 40px;
+	border-radius: 2px;
+	background: transparent;
+	color: #d1d1d1;
+	border: 1px solid #d1d1d1;
+	cursor: pointer;
+	min-width: 200px;
+}
+
+
+
+img {
+	width: 30px;
+}
